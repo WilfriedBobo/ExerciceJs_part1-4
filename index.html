@@ -5,9 +5,18 @@
     <title>Et on recommence !</title>
   </head>
   <body>
+    <form id="satan">
+            <label for="nom">Nom : </label><input type="text" name="nom" id="nom" />
+            <label for="prenom">Prénom : </label><input type="text" name="prenom" id="prenom"/>
+            <label for="ville">Ville : </label><input type="text" name="ville" id="ville" >
+            <button  name="valider" id="valider" onclick="lesinfo()">Valider</button>
+</form>
     <script>
-      var nom = prompt('Entrez votre nom ') , prenom = prompt('\nEntrez votre prenom') , ville = prompt('\nEntrez votre ville');
-      alert(nom + prenom + ville);
+      var monbouton = document.getElementById('valider');
+      monbouton.onclick = function lesinfo(){
+        var mon_nom = document.getElementById('nom').value, mon_prenom = document.getElementById('prenom').value,  ma_ville = document.getElementById('ville').value;
+        alert('Nom : ' + mon_nom  + '\nPrenom : ' + mon_prenom  + '\nVille : ' + ma_ville);
+      } ;
     </script>
   </body>
 </html>
